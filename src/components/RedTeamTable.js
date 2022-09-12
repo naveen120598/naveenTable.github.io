@@ -17,7 +17,7 @@ const RedTeamTable = (props) => {
         <table className='redtable'>
             <thead>
                 <tr><td>Namee</td>
-                    <td>Age</td>
+                    <td>Ageee</td>
                     <td>City</td></tr>
             </thead>
             <tbody>
