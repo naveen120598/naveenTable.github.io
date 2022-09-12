@@ -1,0 +1,9 @@
+.redtable{
+  margin: auto;
+}
+.redtable td,.redtable th{
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+
+}

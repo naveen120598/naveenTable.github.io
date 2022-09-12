@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import RedTeamMembers from './components/RedTeamMembers'
+import RedTeamTable from './components/RedTeamTable'
 
-function App() {
+const App = () => {
+  var [redTeamMemberList,setRedTeamMemberList] = useState([]) 
+  
+  const updateList=(list)=>{
+    const newList = [...redTeamMemberList,list]
+        setRedTeamMemberList(newList)
+        console.log(redTeamMemberList)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RedTeamMembers updateList={updateList}/>
+      <RedTeamTable redTeamMemberList={redTeamMemberList}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
